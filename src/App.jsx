@@ -1,7 +1,14 @@
+import { createBrowserRouter } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
+
+// Create router
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <div>Hello World</div>,
+  },
+]);
+
 export default function App() {
-  return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
+  return <RouterProvider router={router} />;
 }
