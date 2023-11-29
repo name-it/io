@@ -36,6 +36,7 @@ const Button = ({
   size = "md",
   iconBefore,
   iconAfter,
+  onClick,
 }) => {
   const classes = {
     default: `bg-stone-50 text-stone-600 border-stone-800 border font-bold py-2 px-4 hover:bg-stone-800 hover:text-white`,
@@ -56,7 +57,10 @@ const Button = ({
   };
 
   return (
-    <button className={`${variantClass} ${sizeClass} gap-2 flex`}>
+    <button
+      className={`${variantClass} ${sizeClass} gap-2 flex`}
+      onClick={onClick}
+    >
       {iconBefore && getIcon(iconBefore)}
       {children}
       {iconAfter && getIcon(iconAfter)}
