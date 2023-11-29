@@ -5,7 +5,7 @@ function Navbar() {
     <nav className="bg-stone-200 text-stone-700 p-4 flex justify-between font-serif">
       <div className="flex justify-start gap-4 place-items-center">
         <img
-          src="/name-it-logo/logo.jpeg"
+          src="src/assets/logo.jpeg"
           alt="Name It"
           className="w-16 border border-stone-900"
         />
