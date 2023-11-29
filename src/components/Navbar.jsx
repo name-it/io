@@ -1,11 +1,12 @@
 import React from "react";
+import logo from "../assets/logo.jpeg";
 
 function Navbar() {
   return (
     <nav className="bg-stone-200 text-stone-700 p-4 flex justify-between font-serif">
       <div className="flex justify-start gap-4 place-items-center">
         <img
-          src="src/assets/logo.jpeg"
+          src={logo}
           alt="Name It"
           className="w-16 border border-stone-900"
         />
