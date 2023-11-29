@@ -6,7 +6,7 @@ import Button from "../components/Button";
 
 function Home() {
   return (
-    <div className="container mx-auto my-3 font-serif">
+    <div className="container mx-auto m-3 font-serif">
       {/* Navbar */}
       <Navbar />
       {/* Body */}
