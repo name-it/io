@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import BackgroundRemover from "./pages/BackgroundRemover";
+import ImageGenerator from "./pages/ImageGenerator";
 
 // Create router
 const router = createBrowserRouter(
@@ -17,6 +18,10 @@ const router = createBrowserRouter(
     {
       path: "/background-remover",
       element: <BackgroundRemover />,
+    },
+    {
+      path: "/image-generator",
+      element: <ImageGenerator />,
     },
   ],
   {
