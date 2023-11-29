@@ -7,11 +7,11 @@ function Home() {
   return (
     <Layout>
       <div className="my-4">
-        <Button variant="primary" iconBefore="wallpaper">
-          <Link to={"/background-remover"} className="w-max">
+        <Link to={"/background-remover"}>
+          <Button variant="primary" iconBefore="wallpaper">
             Background Remover
-          </Link>
-        </Button>
+          </Button>
+        </Link>
       </div>
     </Layout>
   );
