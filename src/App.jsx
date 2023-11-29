@@ -3,16 +3,21 @@ import { RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 
 // Create router
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/about",
+      element: <div>About</div>,
+    },
+  ],
   {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/about",
-    element: <div>About</div>,
-  },
-]);
+    basename: "/io/",
+  }
+);
 
 export default function App() {
   return (
