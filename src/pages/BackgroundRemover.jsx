@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import Layout from "../components/Layout";
 
 function BackgroundRemover() {
-  return (
-    <div>BackgroundRemover</div>
-  )
+  return <Layout>BackgroundRemover</Layout>;
 }
 
-export default BackgroundRemover
+export default BackgroundRemover;

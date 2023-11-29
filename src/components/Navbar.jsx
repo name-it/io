@@ -6,6 +6,7 @@ import {
   CancelRounded,
   WallpaperRounded,
 } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -22,9 +23,9 @@ const Navbar = () => {
           alt="Name It"
           className="w-16 border border-stone-900"
         />
-        <a href="/" className="font-bold text-5xl">
+        <Link to="/" className="font-bold text-5xl">
           Name It
-        </a>
+        </Link>
       </div>
 
       {/* Hamburger menu for mobile view */}
