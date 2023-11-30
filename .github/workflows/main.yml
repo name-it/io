@@ -28,9 +28,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Set a Secret as env
-        with:
-          VITE_TEST_SECRET: ${{ secrets.VITE_TEST_SECRET }}
       - name: Checkout
         uses: actions/checkout@v4
       - name: Set up Node
@@ -44,6 +41,8 @@ jobs:
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v3
+        with:
+          VITE_TEST_SECRET: ${{ secrets.VITE_TEST_SECRET }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
