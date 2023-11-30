@@ -1,0 +1,17 @@
+name: Test WorkFlow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  simple-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Read a Secret
+        run: echo "My unkown secret is ${{ secrets.VITE_TEST_SECRET }}
