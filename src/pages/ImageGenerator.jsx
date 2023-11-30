@@ -23,6 +23,23 @@ function ImageGenerator() {
     const result = await response.blob();
     setImage(URL.createObjectURL(result));
   }
+
+  // Create Image Function
+  const handleCreateImage = () => {
+    query({ inputs: text });
+
+    // Set the dummy image till then
+    setImage("src/assets/dummy_image.png");
+  };
+
+  // Download Image
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.download = "image.png";
+    link.href = image;
+    link.click();
+  };
+
   return (
     <Layout>
       <h1 className="text-3xl font-bold">Image Generator</h1>
@@ -37,9 +54,23 @@ function ImageGenerator() {
           className="border border-stone-800 p-1 text-stone-700"
         />
       </div>
-      <Button onClick={() => query({ inputs: text })}>Create Image</Button>
+      <Button onClick={handleCreateImage}>Create Image</Button>
+      <br />
       {/* Display Image if available */}
-      {image && <img src={image} alt="Created image" className="w-full" />}
+      {image && (
+        <>
+          <div className="w-96 flex mx-auto p-2 border-2 border-dotted border-stone-900">
+            <img src={image} alt="Created image" className="w-full" />
+          </div>
+          <Button
+            variant="primary"
+            iconAfter={"download"}
+            onClick={handleDownload}
+          >
+            Download
+          </Button>
+        </>
+      )}
     </Layout>
   );
 }

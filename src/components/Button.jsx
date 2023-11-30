@@ -5,6 +5,7 @@ import {
   CheckRounded,
   SearchRounded,
   SettingsRounded,
+  DownloadRounded,
 } from "@mui/icons-material";
 
 const Icon = ({ name, size = "md" }) => {
@@ -28,6 +29,7 @@ const iconsMap = {
   check: CheckRounded,
   search: SearchRounded,
   settings: SettingsRounded,
+  download: DownloadRounded,
 };
 
 const Button = ({
