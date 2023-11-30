@@ -9,8 +9,9 @@ function ImageResizer() {
 
   //   Function to Handle Download Image
   const handleDownloadImage = () => {
+    console.log(selectedImage[0]);
     const link = document.createElement("a");
-    link.href = selectedImage;
+    link.href = selectedImage[0].data_url;
     link.download = "image.png";
     link.click();
   };
