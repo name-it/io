@@ -38,6 +38,10 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Set a Secret as env
+        env:
+          VITE_TEST_SECRET: ${{ secrets.VITE_TEST_SECRET }}
+        run: echo ${{ env.VITE_TEST_SECRET }}
       - name: Checkout
         uses: actions/checkout@v4
       - name: Set up Node
