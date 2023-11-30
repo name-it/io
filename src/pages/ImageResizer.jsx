@@ -6,12 +6,8 @@ import ImageUploader from "../components/ImageUploader";
 function ImageResizer() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [resizedImage, setResizedImage] = useState(null);
-  const [width, setWidth] = useState(
-    selectedImage ? selectedImage[0].width : ""
-  );
-  const [height, setHeight] = useState(
-    selectedImage ? selectedImage[0].height : ""
-  );
+  const [width, setWidth] = useState("");
+  const [height, setHeight] = useState("");
 
   const handleDownloadImage = () => {
     const link = document.createElement("a");
