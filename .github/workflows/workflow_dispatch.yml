@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Read a Secret
-        run: echo "My unkown secret is ${{ secrets.API_KET }}"
+        run: echo "My unkown secret is ${{ secrets.VITE_TEST_SECRET }}"
