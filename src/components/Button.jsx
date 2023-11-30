@@ -46,6 +46,9 @@ const Button = ({
     default: `bg-stone-50 text-stone-600 border-stone-800 border font-bold py-2 px-4 hover:bg-stone-800 hover:text-white`,
     primary: `bg-stone-100 text-stone-600 border-stone-800 border font-bold py-2 px-4 hover:bg-stone-800 hover:text-white`,
     secondary: `bg-stone-300 text-stone-600 border-stone-800 border text-stone-900 font-bold py-2 px-4 hover:bg-stone-800 hover:text-white`,
+    success: `bg-green-100 text-white border-green-600 border font-bold py-2 px-4 hover:bg-stone-800 hover:text-white`,
+    warning: `bg-orange-100 text-white border-orange-600 border font-bold py-2 px-4 hover:bg-stone-800 hover:text-white`,
+    simple: `bg-stone-50 text-stone-600 border-stone-800 border font-bold py-2 px-4 hover:bg-stone-600 hover:text-white`,
   };
 
   const variantClass = classes[variant || "default"];
