@@ -78,7 +78,7 @@ function ImageGenerator() {
           ) : (
             <Button
               variant="primary"
-              iconAfter={"download"}
+              iconBefore={"download"}
               onClick={handleDownload}
             >
               Download
