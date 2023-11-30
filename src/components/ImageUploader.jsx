@@ -7,7 +7,7 @@ function ImageUploader({ selectedImage, setSelectedImage }) {
   const [width, setWidth] = React.useState("");
   const [height, setHeight] = React.useState("");
 
-  useEffect(async () => {
+  useEffect(() => {
     // If selected image is avaiable
     if (selectedImage && selectedImage[0]) {
       var image = new Image();
