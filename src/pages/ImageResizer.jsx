@@ -49,7 +49,7 @@ function ImageResizer() {
       />
 
       {/* Input fields for width and height */}
-      <div className="mt-4 flex flex-wrap space-x-4">
+      <div className="mt-4 flex flex-wrap space-x-4 flex-col sm:flex-row">
         <input
           type="number"
           placeholder="Width"
