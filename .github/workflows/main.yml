@@ -21,16 +21,6 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Reading secrets
-  read_secret:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-     - name: Read a Secret
-       run: echo "My unkown secret is ${{ secrets.VITE_TEST_SECRET }}"
-  
   # Single deploy job since we're just deploying
   deploy:
     environment:
@@ -39,9 +29,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set a Secret as env
-        env:
+        with:
           VITE_TEST_SECRET: ${{ secrets.VITE_TEST_SECRET }}
-        run: echo ${{ env.VITE_TEST_SECRET }}
       - name: Checkout
         uses: actions/checkout@v4
       - name: Set up Node
