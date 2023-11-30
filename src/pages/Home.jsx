@@ -17,6 +17,10 @@ function Home() {
             Image Generator
           </Button>
         </Link>
+
+        {/* Secret Variable Testing */}
+        <p>test secret</p>
+        <p>{import.meta.env.VITE_TEST_SECRET}</p>
       </div>
     </Layout>
   );
