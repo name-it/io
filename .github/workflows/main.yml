@@ -21,6 +21,16 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # Reading secrets
+  read_secret:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+     - name: Read a Secret
+       run: echo "My unkown secret is ${{ secrets.VITE_TEST_SECRET }}"
+  
   # Single deploy job since we're just deploying
   deploy:
     environment:
