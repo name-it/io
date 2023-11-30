@@ -6,7 +6,7 @@ import Layout from "../components/Layout";
 function Home() {
   return (
     <Layout>
-      <div className="my-4 flex gap-2">
+      <div className="my-4 flex flex-wrap gap-2">
         <Link to={"/background-remover"}>
           <Button variant="primary" iconBefore="wallpaper">
             Background Remover
