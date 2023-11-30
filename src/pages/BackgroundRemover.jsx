@@ -24,8 +24,10 @@ function BackgroundRemover() {
       <div>
         <h1 className="text-3xl font-bold">Background Remover</h1>
         {/* Running Python */}
-        <p>5 + 7 = {output}</p>
-        <Button onClick={runScript}>Run Python</Button>
+        {/* <p>5 + 7 = {output}</p> */}
+        {/* <Button onClick={runScript}>Run Python</Button> */}
+
+        <p className="text-5xl">Comming Soon</p>
 
         {/* Image Uploader */}
         <ImageUploader
