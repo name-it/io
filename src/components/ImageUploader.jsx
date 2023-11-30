@@ -7,14 +7,16 @@ function ImageUploader({ selectedImage, setSelectedImage }) {
   const [width, setWidth] = React.useState("");
   const [height, setHeight] = React.useState("");
 
-  useEffect(() => {
+  useEffect(async () => {
     // If selected image is avaiable
     if (selectedImage && selectedImage[0]) {
       var image = new Image();
       image.src = selectedImage[0].data_url;
-      // Set the widht and height of image
-      setHeight(image.height);
-      setWidth(image.width);
+
+      image.onload = () => {
+        setWidth(image.width);
+        setHeight(image.height);
+      };
     }
   }, [selectedImage]);
 
