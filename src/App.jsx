@@ -3,6 +3,7 @@ import { RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import BackgroundRemover from "./pages/BackgroundRemover";
 import ImageGenerator from "./pages/ImageGenerator";
+import ImageResizer from "./pages/ImageResizer";
 
 // Create router
 const router = createBrowserRouter(
@@ -22,6 +23,14 @@ const router = createBrowserRouter(
     {
       path: "/image-generator",
       element: <ImageGenerator />,
+    },
+    {
+      path: "*",
+      element: <div>Not Found</div>,
+    },
+    {
+      path: "/image-resizer",
+      element: <ImageResizer />,
     },
   ],
   {

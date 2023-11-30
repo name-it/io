@@ -17,6 +17,11 @@ function Home() {
             Image Generator
           </Button>
         </Link>
+        <Link to={"/image-resizer"}>
+          <Button variant="primary" iconBefore="wallpaper">
+            Image Resizer
+          </Button>
+        </Link>
       </div>
     </Layout>
   );
