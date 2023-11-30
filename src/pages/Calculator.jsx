@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
+import Button from "../components/Button";
 
 function Calculator() {
   const [input, setInput] = useState("");
@@ -21,13 +22,13 @@ function Calculator() {
   };
 
   const renderButton = (value) => (
-    <button
+    <Button
       key={value}
-      className="p-2 m-1 border border-gray-400 rounded"
+      variant="simple"
       onClick={() => handleButtonClick(value)}
     >
       {value}
-    </button>
+    </Button>
   );
 
   return (
