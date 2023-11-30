@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import { useState } from "react";
 import Button from "../components/Button";
+import dummyImage from "../assets/dummy_image.png";
 
 function ImageGenerator() {
   const [image, setImage] = useState(null);
@@ -29,7 +30,7 @@ function ImageGenerator() {
     query({ inputs: text });
 
     // Set the dummy image till then
-    setImage("src/assets/dummy_image.png");
+    setImage(dummyImage);
   };
 
   // Download Image
@@ -60,7 +61,7 @@ function ImageGenerator() {
       {image && (
         <>
           <div className="w-96 flex mx-auto p-2 border-2 border-dotted border-stone-900">
-            {image === "src/assets/dummy_image.png" ? (
+            {image === dummyImage ? (
               <img
                 src={image}
                 alt="Created image"
@@ -71,7 +72,7 @@ function ImageGenerator() {
             )}
           </div>
 
-          {image === "src/assets/dummy_image.png" ? (
+          {image === dummyImage ? (
             <p className="text-stone-700 font-bold text-center">
               Creating image...
             </p>
