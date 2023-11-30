@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { WallpaperRounded } from "@mui/icons-material";
 import ReactImageUploading from "react-images-uploading";
 import Button from "./Button";
 
 function ImageUploader({ selectedImage, setSelectedImage }) {
+  const [width, setWidth] = React.useState("");
+  const [height, setHeight] = React.useState("");
+
+  useEffect(() => {
+    // If selected image is avaiable
+    if (selectedImage && selectedImage[0]) {
+      var image = new Image();
+      image.src = selectedImage[0].data_url;
+      // Set the widht and height of image
+      setHeight(image.height);
+      setWidth(image.width);
+    }
+  }, [selectedImage]);
+
   return (
     <ReactImageUploading
       value={selectedImage}
@@ -56,6 +70,12 @@ function ImageUploader({ selectedImage, setSelectedImage }) {
               <div className="image-item__btn-wrapper flex gap-2">
                 <Button onClick={() => onImageUpdate(index)}>Update</Button>
                 <Button onClick={() => onImageRemove(index)}>Remove</Button>
+
+                <div className="flex justify-end place-items-center mx-auto font-bold">
+                  <p>
+                    {width} x {height}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
