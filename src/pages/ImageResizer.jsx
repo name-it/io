@@ -70,7 +70,13 @@ function ImageResizer() {
       {/* Display Resized Image */}
       {resizedImage && (
         <div className="mt-4">
-          <img src={resizedImage} alt="Resized" style={{ maxWidth: "100%" }} />
+          <div className="my-5 border-2 border-stone-800 border-dotted w-max">
+            <img
+              src={resizedImage}
+              alt="Resized"
+              style={{ maxWidth: "100%" }}
+            />
+          </div>
           <Button
             className="mt-2"
             variant="primary"
