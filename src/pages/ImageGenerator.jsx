@@ -60,15 +60,30 @@ function ImageGenerator() {
       {image && (
         <>
           <div className="w-96 flex mx-auto p-2 border-2 border-dotted border-stone-900">
-            <img src={image} alt="Created image" className="w-full" />
+            {image === "src/assets/dummy_image.png" ? (
+              <img
+                src={image}
+                alt="Created image"
+                className="w-full animate-pulse"
+              />
+            ) : (
+              <img src={image} alt="Created image" className="w-full" />
+            )}
           </div>
-          <Button
-            variant="primary"
-            iconAfter={"download"}
-            onClick={handleDownload}
-          >
-            Download
-          </Button>
+
+          {image === "src/assets/dummy_image.png" ? (
+            <p className="text-stone-700 font-bold text-center">
+              Creating image...
+            </p>
+          ) : (
+            <Button
+              variant="primary"
+              iconAfter={"download"}
+              onClick={handleDownload}
+            >
+              Download
+            </Button>
+          )}
         </>
       )}
     </Layout>
