@@ -22,6 +22,11 @@ function Home() {
             Image Resizer
           </Button>
         </Link>
+        <Link to={"/calculator"}>
+          <Button variant="primary" iconBefore="calculator">
+            Calculator
+          </Button>
+        </Link>
       </div>
     </Layout>
   );

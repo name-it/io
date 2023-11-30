@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import BackgroundRemover from "./pages/BackgroundRemover";
 import ImageGenerator from "./pages/ImageGenerator";
 import ImageResizer from "./pages/ImageResizer";
+import Calculator from "./pages/Calculator";
 
 // Create router
 const router = createBrowserRouter(
@@ -31,6 +32,10 @@ const router = createBrowserRouter(
     {
       path: "/image-resizer",
       element: <ImageResizer />,
+    },
+    {
+      path: "/calculator",
+      element: <Calculator />,
     },
   ],
   {

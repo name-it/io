@@ -6,6 +6,7 @@ import {
   SearchRounded,
   SettingsRounded,
   DownloadRounded,
+  CalculateOutlined,
 } from "@mui/icons-material";
 
 const Icon = ({ name, size = "md" }) => {
@@ -30,6 +31,7 @@ const iconsMap = {
   search: SearchRounded,
   settings: SettingsRounded,
   download: DownloadRounded,
+  calculator: CalculateOutlined,
 };
 
 const Button = ({
